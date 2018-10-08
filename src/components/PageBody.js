@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'react-emotion'
 require('prismjs/themes/prism.css')
 
 const Body = styled.div`

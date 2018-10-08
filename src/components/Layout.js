@@ -1,5 +1,5 @@
 import React from 'react'
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider } from 'emotion-theming'
 import Helmet from 'react-helmet'
 import favicon from '../images/favicon.ico'
 import '../styles/global'
