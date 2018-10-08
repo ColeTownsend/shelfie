@@ -1,7 +1,6 @@
 import React from 'react'
 import { ThemeProvider } from 'emotion-theming'
 import Helmet from 'react-helmet'
-import favicon from '../images/favicon.ico'
 import '../styles/global'
 import '../styles/fonts/font.css'
 import theme from '../styles/theme'
@@ -16,7 +15,6 @@ const Template = ({ children, background }) => {
         <title>{config.siteTitle}</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href={favicon} />
         <meta name="description" content={config.siteDescription} />
         <meta property="og:title" content={config.siteTitle} />
         <meta property="og:url" content={config.siteUrl} />
