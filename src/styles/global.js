@@ -29,20 +29,23 @@ injectGlobal`
   /* Added to Fix Footer to bottom of viewport */
   html, body {
     height: 100%;
+    position: relative;
   }
   .siteRoot {
-    height: 100vh;
+    min-height: 100vh;
+    height: calc(100vh + 80px);
     display: flex;
     flex-direction: column;
-    position: relative;
   }
 
   .siteContent {
     flex: 1 0 auto;
+    min-height: calc(100vh - 80px);
   }
 
   footer {
     width: 100%;
+    height: 80px;
   }
 
   /* End Fix to Place Footer on Bottom of Viewport */

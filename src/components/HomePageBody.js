@@ -3,13 +3,19 @@ import styled from 'react-emotion'
 import { Link } from 'gatsby'
 import Img from "gatsby-image"
 
-const Container = styled.div({
-  maxWidth: 480,
-  background: 'white',
-  borderRadius: 6,
-  padding: '3em',
-  marginLeft: '-3em'
-});
+const Container = styled.div`
+  max-width: 480px;
+  width: 100%;
+  background: white;
+  border-radius: 6px;
+  padding: 1.5em;
+
+  @media screen and (min-width: ${props => props.theme.responsive.small}) {
+    padding: 3em;
+  }
+`;
+
+
 
 const Button = styled.div`
   background: ${props => props.theme.colors.highlight};

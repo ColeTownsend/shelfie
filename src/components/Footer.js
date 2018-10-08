@@ -7,8 +7,13 @@ const Wrapper = styled.footer`
   justify-content: space-between;
   align-items: flex-start;
   margin: 0 auto;
-  background: 'transparent';
+  padding-top: 1em;
+  padding-bottom: 1em;
   max-width: ${props => props.theme.sizes.maxWidth};
+
+  @media screen and (min-width: ${props => props.theme.responsive.small}) {
+    background: transparent;
+  }
 `
 
 const List = styled.ul`
@@ -54,7 +59,7 @@ const Footer = () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          Email
+          help@getshelfie.co
         </a>
       </Item>
     </List>

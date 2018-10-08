@@ -16,6 +16,7 @@ const Nav = styled.nav`
   ul {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
   }
 
   li {
@@ -27,6 +28,11 @@ const Nav = styled.nav`
       margin: 0;
       flex-basis: 100%;
     }
+  }
+
+  .logo {
+    font-size: 24px;
+    font-family: "Monoist", monospace;
   }
 
   a {
@@ -51,14 +57,24 @@ const Menu = () => {
     <Header>
       <Nav>
         <ul>
-          <li>
+          <li className="logo">
             <Link to="/" activeStyle={activeLinkStyle}>
               Shelfie
             </Link>
           </li>
           <li>
-            <Link to="/contact/" activeStyle={activeLinkStyle}>
+            <Link to="/contact" activeStyle={activeLinkStyle}>
               Contact
+            </Link>
+          </li>
+          <li>
+            <Link to="/guests" activeStyle={activeLinkStyle}>
+              Guests
+            </Link>
+          </li>
+          <li>
+            <Link to="/brand-partners" activeStyle={activeLinkStyle}>
+              Brands
             </Link>
           </li>
         </ul>

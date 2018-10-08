@@ -4,6 +4,7 @@ import styled from 'react-emotion'
 const Title = styled.h1`
   font-size: ${props => (props.small ? '2em' : '3em')};
   text-transform: capitalize;
+  color: ${props => props.theme.colors.highlight};
   font-weight: 600;
   text-align: center;
   margin: 0 0 3rem 0;

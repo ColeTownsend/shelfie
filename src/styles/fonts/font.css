@@ -14,11 +14,18 @@
     font-style: normal;
 }
 
-
 @font-face {
     font-family: 'Cerebri Sans';
     src: url('cerebrisans-bold.woff2') format('woff2'),
          url('cerebrisans-bold.woff') format('woff');
     font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Monoist';
+    src: url('monoist-regular.woff2') format('woff2'),
+         url('monoist-regular.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
 }
