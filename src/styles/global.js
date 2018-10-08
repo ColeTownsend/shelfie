@@ -34,10 +34,13 @@ injectGlobal`
     height: 100vh;
     display: flex;
     flex-direction: column;
+    position: relative;
   }
+
   .siteContent {
     flex: 1 0 auto;
   }
+
   footer {
     width: 100%;
   }

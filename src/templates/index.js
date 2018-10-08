@@ -5,13 +5,16 @@ import Helmet from 'react-helmet'
 import Container from '../components/Container'
 import SEO from '../components/SEO'
 import config from '../utils/siteConfig'
-import PageBody from '../components/PageBody';
-import PageTitle from '../components/PageTitle';
+import HomePageBody from '../components/HomePageBody';
+
+const styles = `
+  p {
+    font-size: 18px
+  }
+`
 
 const Index = ({ data }) => {
   const page = data.us.edges[0]
-
-  console.log(data)
 
   return (
     <Layout>
@@ -20,8 +23,7 @@ const Index = ({ data }) => {
         <title>{`${config.siteTitle}`}</title>
       </Helmet>
       <Container>
-        <PageTitle>{page.node.title}</PageTitle>
-        <PageBody body={page.node.body} />
+        <HomePageBody img={page.node.hero} body={page.node.body} styles={styles} />
       </Container>
     </Layout>
   )
@@ -34,6 +36,18 @@ export const query = graphql`
         node {
           id
           title
+          hero {
+            fluid {
+              base64
+              tracedSVG
+              aspectRatio
+              src
+              srcSet
+              srcWebp
+              srcSetWebp
+              sizes
+            }
+          }
           body {
             childMarkdownRemark {
               id

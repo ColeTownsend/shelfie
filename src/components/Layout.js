@@ -9,7 +9,7 @@ import config from '../utils/siteConfig'
 import Menu from '../components/Menu'
 import Footer from '../components/Footer'
 
-const Template = ({ children }) => {
+const Template = ({ children, background }) => {
   return (
     <div className="siteRoot">
       <Helmet>

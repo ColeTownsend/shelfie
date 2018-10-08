@@ -16,10 +16,10 @@ const Body = styled.div`
   }
 
   h1 {
-    font-size: 2em;
+    font-size: 1.6em;
   }
   h2 {
-    font-size: 1.5em;
+    font-size: 1.4em;
   }
   h3 {
     font-size: 1.2em;
@@ -28,10 +28,7 @@ const Body = styled.div`
   p {
     line-height: 1.6;
     margin: 0 0 2em 0;
-  }
-
-  p:first-of-type {
-    font-size: 1.2em
+    font-size: 18px;
   }
 
   a {
@@ -99,6 +96,8 @@ const Body = styled.div`
       background: inherit !important;
     }
   }
+
+  ${props => props.styles}
 `
 
 const PageBody = props => {
