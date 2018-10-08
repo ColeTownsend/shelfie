@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'react-emotion'
 
 const Header = styled.header`
-  background: ${props => props.theme.colors.base};
+  background: ${props => props.theme.colors.transparent};
   width: 100%;
   padding: 1.5em 0;
 `
@@ -21,6 +21,7 @@ const Nav = styled.nav`
   li {
     display: inline-block;
     margin-left: 1em;
+
     &:first-child {
       position: relative;
       margin: 0;
@@ -30,18 +31,19 @@ const Nav = styled.nav`
 
   a {
     text-decoration: none;
-    color: DarkGray;
-    font-weight: 600;
+    color: ${props => props.theme.colors.highlight};
+    font-weight: 400;
     transition: all 0.2s;
-    border-bottom: 2px solid ${props => props.theme.colors.base};
+    border-bottom: 1px solid transparent;
     &:hover {
-      color: white;
+      color: ${props => props.theme.colors.base};
     }
   }
 `
 
 const activeLinkStyle = {
-  color: 'white',
+  color: `${props => props.theme.colors.highlight}`,
+  borderBottom: `1px solid ${props => props.theme.colors.highlight}`
 }
 
 const Menu = () => {
@@ -51,7 +53,7 @@ const Menu = () => {
         <ul>
           <li>
             <Link to="/" activeStyle={activeLinkStyle}>
-              Home
+              Shelfie
             </Link>
           </li>
           <li>

@@ -16,18 +16,22 @@ const Body = styled.div`
   }
 
   h1 {
-    font-size: 1.5em;
+    font-size: 2em;
   }
   h2 {
-    font-size: 1.25em;
+    font-size: 1.5em;
   }
   h3 {
-    font-size: 1em;
+    font-size: 1.2em;
   }
 
   p {
     line-height: 1.6;
     margin: 0 0 2em 0;
+  }
+
+  p:first-of-type {
+    font-size: 1.2em
   }
 
   a {
